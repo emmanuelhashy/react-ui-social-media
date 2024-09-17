@@ -21,7 +21,6 @@ const AccordionItem = ({ title, content, isOpen, toggle }) => {
         </div>
       </button>
 
-      {/* Animated content area */}
       <div
         ref={contentRef}
         className={`overflow-hidden transition-all duration-500 ease-in-out`}
