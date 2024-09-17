@@ -1,10 +1,12 @@
-import {CardTransition} from "./components/CardTransition";
-
+import React from "react";
+import Navbar from "./components/Navbar";
+import ContentSection from "./components/ContentSection";
 
 function App() {
   return (
-    <div>
-      <CardTransition/>
+    <div className="App">
+      <Navbar />
+      <ContentSection />
     </div>
   );
 }

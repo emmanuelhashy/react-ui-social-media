@@ -1,0 +1,51 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.navbar a {
+  font-weight: 500;
+  text-transform: uppercase;
+  transition: color .3s ease-in-out;
+}
+
+.navbar a:hover {
+  color: #4c0979;
+}
+
+.content-section {
+  padding-top: 64px;
+}
+
+.carousel .swiper-slide {
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+  filter: grayscale(0.6);
+}
+
+.active {
+  opacity: 1;
+}
+
+.not-active {
+  transition: 1s;
+  opacity: 0;
+}
+
+.carousel .swiper-pagination-bullet-active {
+  background: #fff;
+}
+
+.carousel .swiper-pagination-bullet {
+  background: #ffffffa1;
+}
+
