@@ -1,9 +1,7 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, EffectCoverflow, Scrollbar, A11y } from 'swiper/modules';
+import { Pagination, EffectCoverflow } from 'swiper/modules';
 
-
-// Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
@@ -39,7 +37,6 @@ const ContentSection = () => {
           </button>
         </div>
 
-        {/* Right side carousel */}
         <div className="carousel w-[600px] mx-auto">
           <Swiper
             effect={"coverflow"}
