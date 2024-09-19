@@ -10,7 +10,6 @@ const Hero = ({
   const bubble2Ref = useRef(null);
 
   useEffect(() => {
-    // Animate the credit card
     gsap.to(cardRef.current, {
       duration: 5,
       rotationY: 360,
@@ -19,7 +18,6 @@ const Hero = ({
       ease: "power2.inOut",
     });
 
-    // Floating effect for the bubbles
     gsap.to(bubble1Ref.current, {
       duration: 6,
       y: -100,
@@ -41,7 +39,6 @@ const Hero = ({
 
   return (
     <div className="bg-black flex w-full justify-center items-center min-h-screen relative">
-      {/* Floating bubbles */}
       <div
         ref={bubble1Ref}
         className="bubble absolute bg-white bg-opacity-10 rounded-full"
@@ -53,7 +50,6 @@ const Hero = ({
         style={{ width: "300px", height: "300px", top: "10%", left: "40%" }}
       ></div>
 
-      {/* Credit Card */}
       <div className="flex w-full items-center justify-around">
         <div className="text-white w-2/5 space-y-2">
           <p className="text-2xl font-medium capitalize">{cardType}</p>
@@ -66,7 +62,7 @@ const Hero = ({
             className="card relative w-96 h-64 bg-gradient-to-br from-gray-900 to-gray-800 text-white p-6 rounded-xl shadow-lg"
             style={{ transformStyle: "preserve-3d" }}
           >
-            <div className="text-xl font-semibold">monobank</div>
+            <div className="text-xl font-semibold">Monobank</div>
             <div className="flex justify-between">
               <div className="card-chip mt-6 w-12 h-8 bg-gray-400 rounded"></div>
 
