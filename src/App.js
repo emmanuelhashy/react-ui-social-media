@@ -1,23 +1,11 @@
-import logo from './logo.svg';
 import './App.css';
+import LoadSpinnerCard from './components';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app flex flex-col space-y-4 items-center bg-[#F7DCB9] justify-center h-screen">
+      <h1 className='text-2xl text-medium'>Load Spinners</h1>
+      <LoadSpinnerCard/>
     </div>
   );
 }
