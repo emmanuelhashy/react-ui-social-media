@@ -1,38 +1,61 @@
-.App {
-  text-align: center;
+body {
+  margin: 0;
+  height: 100vh;
+  
+  background: #0c1016;
+  color: #ffffff;
+  font-family: "Euclid Circular A", sans-serif;
+  
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  box-sizing: border-box;
+  user-select: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.cards {
+  display: grid;
+  place-items: center;
+  overflow-x: hidden;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.cards:hover .card {
+  background: radial-gradient(
+    800px circle at var(--xPos) var(--yPos),
+    rgba(0, 255, 241, 0.4),
+    transparent 15%
+  );
 }
 
-.App-link {
-  color: #61dafb;
+.card {
+  background: radial-gradient(
+    400px circle at 0 0,
+    rgba(0, 255, 241, 0),
+    transparent 0%
+  );
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: inherit;
+  background: radial-gradient(
+    500px circle at var(--xPos) var(--yPos),
+    rgba(0, 255, 241, 0.1),
+    transparent 35%
+  );
+  opacity: 0;
+  transition: all 0.15s ease-in-out;
+}
+
+.cards .card:hover::before {
+  opacity: 1;
+}
+
+.card:hover :is(img, h2, p) {
+  opacity: 1;
 }
