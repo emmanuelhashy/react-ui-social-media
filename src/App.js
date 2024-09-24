@@ -1,25 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Dropdown from "./components/DropdownMenu";
 
-function App() {
+const App = () => {
+  const menuItems = [
+    { label: "Serie A", link: "#" },
+    { label: "Bundesliga", link: "#" },
+    {
+      label: "UEFA",
+      submenu: [
+        { label: "Champions League", link: "/" },
+        { label: "Europa League", link: "/" },
+        { label: "Super Cup", link: "/" },
+      ],
+    },
+    { label: "Ligue 1", link: "#" },
+    {
+      label: "International Tournament",
+      submenu: [
+        { label: "Copa America", link: "/" },
+        { label: "Euros", link: "/" },
+        { label: "FIFA World Cup", link: "/" },
+        { label: "AFC Asian Cup", link: "/" },
+      ],
+    },
+  ];
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="flex justify-center items-start pt-10 h-screen bg-gray-100">
+      <Dropdown menuItems={menuItems} />
     </div>
   );
-}
+};
 
 export default App;
