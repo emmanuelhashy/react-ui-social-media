@@ -31,12 +31,6 @@ const teams = [
   { name: "Newcastle United", logo: "Newcastle-United.png", headCoach: 9 },
 ];
 
-const filterByName = (teams, searchTerm) => {
-  return teams.filter((team) =>
-    team.name.toLowerCase().includes(searchTerm.toLowerCase())
-  );
-};
-
 const Cards = () => {
   const cards = document.querySelectorAll(".card");
 
@@ -86,7 +80,7 @@ const Cards = () => {
                 <img
                 className="logo w-[40px] sm:w-[50px]"
                 src={`${getImage(team.logo)}`}
-                alt="Arsenal"
+                alt={team.name}
                 />
                 <h2 className="text-md sm:text-lg font-normal opacity-45 transition-opacity duration-300">
                 {team.name}

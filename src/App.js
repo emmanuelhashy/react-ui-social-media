@@ -1,5 +1,5 @@
 import './App.css';
-import Cards from './team';
+import Cards from './teams';
 
 function App() {
   return (
