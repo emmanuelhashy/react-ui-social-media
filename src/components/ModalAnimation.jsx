@@ -26,64 +26,23 @@ const ModalAnimations = () => {
         >
           <div className="modal-background w-full h-full flex items-center justify-center ">
             <div className="modal bg-white p-8 rounded-md relative shadow-lg">
-                <p className="bg-red-400 absolute top-0 right-0  p-3" onClick={closeModal}>X</p>
+                <p className="text-white bg-blue-500 cursor-pointer absolute top-0 right-0  p-3" onClick={closeModal}>X</p>
               <TabNav/>
             </div>
           </div>
         </div>
       )}
       <div className="content text-center bg-white h-full relative z-0">
-        <h1 className="pt-20 pb-8 text-4xl">Modal Animations</h1>
+        <h1 className="pt-20 pb-8 text-4xl">Click to view Tab Nav Example</h1>
         <div className="buttons max-w-lg mx-auto">
           <div
             id="one"
             className="button cursor-pointer inline-block py-2 px-4 m-2 bg-gray-200 rounded-md shadow-md hover:bg-blue-500 hover:text-white"
             onClick={() => handleClick("one")}
           >
-            Unfolding
+            Tab Nav
           </div>
-          <div
-            id="two"
-            className="button cursor-pointer inline-block py-2 px-4 m-2 bg-gray-200 rounded-md shadow-md hover:bg-blue-500 hover:text-white"
-            onClick={() => handleClick("two")}
-          >
-            Revealing
-          </div>
-          <div
-            id="three"
-            className="button cursor-pointer inline-block py-2 px-4 m-2 bg-gray-200 rounded-md shadow-md hover:bg-blue-500 hover:text-white"
-            onClick={() => handleClick("three")}
-          >
-            Uncovering
-          </div>
-          <div
-            id="four"
-            className="button cursor-pointer inline-block py-2 px-4 m-2 bg-gray-200 rounded-md shadow-md hover:bg-blue-500 hover:text-white"
-            onClick={() => handleClick("four")}
-          >
-            Blow Up
-          </div>
-          <div
-            id="five"
-            className="button cursor-pointer inline-block py-2 px-4 m-2 bg-gray-200 rounded-md shadow-md hover:bg-blue-500 hover:text-white"
-            onClick={() => handleClick("five")}
-          >
-            Meep Meep
-          </div>
-          <div
-            id="six"
-            className="button cursor-pointer inline-block py-2 px-4 m-2 bg-gray-200 rounded-md shadow-md hover:bg-blue-500 hover:text-white"
-            onClick={() => handleClick("six")}
-          >
-            Sketch
-          </div>
-          <div
-            id="seven"
-            className="button cursor-pointer inline-block py-2 px-4 m-2 bg-gray-200 rounded-md shadow-md hover:bg-blue-500 hover:text-white"
-            onClick={() => handleClick("seven")}
-          >
-            Bond
-          </div>
+          
         </div>
       </div>
     </div>

@@ -16,7 +16,7 @@ const TabNav = () => {
             showcasing the latest updates, news, and features we’ve recently introduced. Whether you're a new visitor 
             or a returning user, there’s always something exciting to discover here.
           </p>
-          <ul className="list-disc ml-6 mb-4">
+          <ul className="list-none ml-6 mb-4">
             <li>Latest News: Stay updated with our recent announcements.</li>
             <li>Highlighted Features: Explore our most popular services.</li>
             <li>User Stories: Hear from users who’ve benefited from our platform.</li>
@@ -62,7 +62,7 @@ const TabNav = () => {
             We offer a comprehensive range of services tailored to meet the unique needs of our clients. 
             Whether you're looking for consulting, technical solutions, or creative strategies, we have something for everyone.
           </p>
-          <ul className="list-disc ml-6 mb-4">
+          <ul className="list-none mb-4">
             <li>Business Consulting: Expert advice to help you navigate the complexities of the market.</li>
             <li>Product Development: Customized solutions built to your specifications.</li>
             <li>Marketing Strategies: Innovative approaches to reach and engage your target audience.</li>
@@ -93,7 +93,7 @@ const TabNav = () => {
           <p className="mb-4">
             Follow us on our social media platforms to stay updated with our latest news and announcements:
           </p>
-          <ul className="list-disc ml-6">
+          <ul className="list-none">
             <li>Facebook: <a href="https://facebook.com" className="text-blue-600 underline">facebook.com/company</a></li>
             <li>Twitter: <a href="https://twitter.com" className="text-blue-600 underline">twitter.com/company</a></li>
             <li>LinkedIn: <a href="https://linkedin.com" className="text-blue-600 underline">linkedin.com/company</a></li>
