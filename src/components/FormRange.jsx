@@ -7,7 +7,6 @@ const FormRange = ({ label, name, type, size }) => {
   const step = 1000;
   const selectedPrice = type === 'min' ? minPrice : maxSelectedPrice;
 
-  // Handle range change
   const handleRangeChange = (e) => {
     const value = parseInt(e.target.value, 10);
     if (type === 'min') {
@@ -29,7 +28,7 @@ const FormRange = ({ label, name, type, size }) => {
         min={0}
         max={maxPrice}
         value={selectedPrice}
-        onChange={handleRangeChange} // Update the global state on change
+        onChange={handleRangeChange}
         className={`range range-error ${size}`}
         step={step}
       />
