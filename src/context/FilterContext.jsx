@@ -1,4 +1,5 @@
 import React, { createContext, useContext, useState } from 'react';
+import {data} from '../data'
 
 // Create the Context
 const FilterContext = createContext();
@@ -15,12 +16,14 @@ export const FilterProvider = ({ children }) => {
   const [maxSelectedPrice, setMaxSelectedPrice] = useState(maxPrice);
 
   // Example products list
-  const products = [
-    { id: 1, name: 'Product 1', price: 5000 },
-    { id: 2, name: 'Product 2', price: 15000 },
-    { id: 3, name: 'Product 3', price: 25000 },
-    { id: 4, name: 'Product 4', price: 45000 },
-  ];
+  // const products = [
+  //   { id: 1, name: 'Product 1', price: 5000 },
+  //   { id: 2, name: 'Product 2', price: 15000 },
+  //   { id: 3, name: 'Product 3', price: 25000 },
+  //   { id: 4, name: 'Product 4', price: 45000 },
+  // ];
+
+  const products = data;
 
   // State to hold filtered products
   const [filteredProducts, setFilteredProducts] = useState(products);
@@ -28,7 +31,7 @@ export const FilterProvider = ({ children }) => {
   // Function to apply filters
   const applyFilters = () => {
     const filtered = products.filter(
-      (product) => product.price >= minPrice && product.price <= maxSelectedPrice
+      (product) => product.product_price >= minPrice && product.product_price <= maxSelectedPrice
     );
     setFilteredProducts(filtered); // Update filtered products
   };

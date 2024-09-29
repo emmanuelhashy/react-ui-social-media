@@ -1,7 +1,7 @@
 import React from 'react';
 import FormRange from './FormRange';
-import { FilterProvider, useFilterContext } from '../context/FilterContext';
-import ProductList from './ProductList';
+import { useFilterContext } from '../context/FilterContext';
+import ProductList from './ProductList.jsx';
 
 // Filter Button Component
 const FilterButton = () => {
@@ -17,7 +17,7 @@ const FilterButton = () => {
     <button
       type="button" // Button will submit the form
       onClick={handleSubmit}
-      className="btn btn-primary btn-sm"
+      className="btn btn-success btn-sm"
     >
       Filter
     </button>
@@ -32,7 +32,7 @@ const ResetButton = () => {
     <button
       type="button"
       onClick={resetFilters} // Call resetFilters when button is clicked
-      className="btn btn-accent btn-sm"
+      className="btn btn-error btn-sm"
     >
       Reset Filters
     </button>
@@ -50,11 +50,11 @@ const Filters = () => {
 
   return (
     
-      <div className='bg-base-200 rounded-md px-8 py-4'>
+      <div className='px-8 py-4'>
         {/* Filter Form */}
         <form
           onSubmit={handleSubmit} // Handle form submission
-          className='grid gap-x-4 gap-y-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 items-center'
+          className='bg-base-200 px-8 py-4 rounded-md grid gap-x-4 gap-y-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 items-center'
         >
           {/* Min Price */}
           <FormRange

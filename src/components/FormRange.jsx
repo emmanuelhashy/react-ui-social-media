@@ -30,7 +30,7 @@ const FormRange = ({ label, name, type, size }) => {
         max={maxPrice}
         value={selectedPrice}
         onChange={handleRangeChange} // Update the global state on change
-        className={`range range-primary ${size}`}
+        className={`range range-error ${size}`}
         step={step}
       />
       <div className='w-full flex justify-between text-xs px-2 mt-2'>
