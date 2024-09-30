@@ -1,23 +1,15 @@
-import logo from './logo.svg';
 import './App.css';
+import ParentComponent from './components/Login';
+import PasswordStrengthIndicator from './components/PasswordStrength';
+import PasswordForm from './components/StrengthMeterParent';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <ParentComponent/>
+      <PasswordForm/>
+      <PasswordStrengthIndicator/>
     </div>
   );
 }
