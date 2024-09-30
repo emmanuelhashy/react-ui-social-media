@@ -1,5 +1,6 @@
 import React from 'react';
 import { useFilterContext } from '../context/FilterContext';
+import { formatPrice } from '../utils';
 
 const FormRange = ({ label, name, type, size }) => {
   const { minPrice, maxSelectedPrice, setMinPrice, setMaxSelectedPrice, maxPrice } = useFilterContext();
@@ -20,7 +21,7 @@ const FormRange = ({ label, name, type, size }) => {
     <div className='form-control'>
       <label htmlFor={name} className='label cursor-pointer'>
         <span className='label-text capitalize'>{label}</span>
-        <span>{selectedPrice}</span>
+        <span>{formatPrice(selectedPrice)}</span>
       </label>
       <input
         type='range'
@@ -34,7 +35,7 @@ const FormRange = ({ label, name, type, size }) => {
       />
       <div className='w-full flex justify-between text-xs px-2 mt-2'>
         <span className='font-bold text-md'>0</span>
-        <span className='font-bold text-md'>Max: {maxPrice}</span>
+        <span className='font-bold text-md'>Max: {formatPrice(maxPrice)}</span>
       </div>
     </div>
   );

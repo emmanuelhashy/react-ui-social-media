@@ -7,14 +7,16 @@ const ProductList = () => {
 
   return (
 
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-10">
+    <div>
       {filteredProducts.length > 0 ? (
-        filteredProducts.map((product) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-10">
+        {filteredProducts.map((product) => (
             <Product key={product.id} {...product} />
-        ))
+        ))}
+        </div>
       ) : (
-        <div className='title'>
-          <h2 className='w-full flex justify-center h-screen items-center text-lg font-medium'>No products found within the selected range.</h2>
+        <div className='w-full flex justify-center pt-20 items-start'>
+          <h2 className='text-lg font-medium'>No products found within the selected range.</h2>
         </div>
       )}
     </div>

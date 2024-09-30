@@ -1,4 +1,5 @@
 import React from "react";
+import { formatPrice } from "../utils";
 
 const Product = ({
   product_name,
@@ -30,9 +31,9 @@ const Product = ({
       <div className="p-4">
         <div className="flex justify-between items-center">
           <div className="flex items-center space-x-2">
-            <p className="font-bold text-xl">${product_price}</p>
+            <p className="font-bold text-xl">{formatPrice(product_discount_price)}</p>
             <p className="line-through text-gray-400">
-              ${product_discount_price}
+              {formatPrice(product_price)}
             </p>
           </div>
           <p className="bg-orange-200 rounded-md px-3 py-1 text-orange-700 text-sm font-medium">
