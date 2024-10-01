@@ -1,15 +1,11 @@
 import './App.css';
-import ParentComponent from './components/Login';
-import PasswordStrengthIndicator from './components/PasswordStrength';
-import PasswordForm from './components/StrengthMeterParent';
+import Login from './components/Login';
 
 
 function App() {
   return (
     <div>
-      <ParentComponent/>
-      <PasswordForm/>
-      <PasswordStrengthIndicator/>
+      <Login/>
     </div>
   );
 }

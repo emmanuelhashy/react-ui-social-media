@@ -1,23 +1,20 @@
 import React, { useState } from "react";
-import { BiCheck, BiShow, BiHide } from "react-icons/bi"; // Import icons
-import PasswordStrengthIndicator from "../PasswordStrengthIndicator"; // Import your PasswordStrengthIndicator
-import PasswordStrengthMeter from "../PasswordStrengthMeter";
+import { BiShow, BiHide } from "react-icons/bi";
+import PasswordStrengthIndicator from "../PasswordStrengthIndicator"; 
 
-const ParentComponent = () => {
+const Login = () => {
   const [password, setPassword] = useState("");
-  const [isPasswordVisible, setIsPasswordVisible] = useState(false); // Track password visibility
+  const [isPasswordVisible, setIsPasswordVisible] = useState(false);
   const [validity, setValidity] = useState({
     minChar: null,
     upperCase: null,
     specialCharAndNumber: null,
   });
 
-  // Toggle password visibility
   const togglePasswordVisibility = () => {
     setIsPasswordVisible(!isPasswordVisible);
   };
 
-  // Handle password change and validate
   const handlePasswordChange = (e) => {
     const pwd = e.target.value;
     setPassword(pwd);
@@ -178,7 +175,7 @@ const ParentComponent = () => {
         <p class="mt-10 text-center text-sm text-gray-500">
           Not a member?
           <a
-            href="#"
+            href="/"
             class="font-semibold leading-6 text-indigo-600 hover:text-indigo-500"
           >
             Start a 14 day free trial
@@ -189,4 +186,4 @@ const ParentComponent = () => {
   );
 };
 
-export default ParentComponent;
+export default Login;
