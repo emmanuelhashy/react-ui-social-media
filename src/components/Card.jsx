@@ -1,5 +1,6 @@
 import React from "react"
-function Card() {
+function Card({cardNumber, cVVNumber, name, expiryDate}) {
+    const formattedCardNumber = cardNumber.padEnd(16, "X").match(/.{1,4}/g) || []; // Ensures a 4-group format
   return (
     <div class="">
         <div class="card">
@@ -11,18 +12,17 @@ function Card() {
                         <img src="https://i.ibb.co/WHZ3nRJ/visa.png" alt="" width="60px"/>
                     </div>
                     <div class="row card-no">
-                        <p>5244</p>
-                        <p>2150</p>
-                        <p>8252</p>
-                        <p>6420</p>
+                    {formattedCardNumber.map((group, index) => (
+                        <p key={index}>{group}</p>
+                      ))}
                     </div>
                     <div class="row card-holder">
-                        <p>CARD HPLDER</p>
+                        <p>CARD HOLDER</p>
                         <p>VALID TILL</p>
                     </div>
                     <div class="row name">
-                        <p>JOE ALISON</p>
-                        <p>10 / 25</p>
+                    <p>{name || "CARD HOLDER"}</p>
+                    <p>{expiryDate || "MM/YY"}</p>
                     </div>
                 </div>
                 <div class="back">
@@ -32,7 +32,7 @@ function Card() {
                         <div>
                             <img src="https://i.ibb.co/S6JG8px/pattern.png"/>
                         </div>
-                        <p>824</p>
+                        <p>{cVVNumber}</p>
                     </div>
                     <div class="row card-text">
                         <p>this is a virtual card design using HTML and CSS. You can aslo design something like this.</p>
