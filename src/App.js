@@ -11,7 +11,7 @@ function App() {
   const [expiryDate, setExpiryDate] = useState("");
   
   return (
-    <div className='flex items-center shadow-md space-x-8 bg-white rounded-md px-10 py-6 mt-10'>
+    <div className='flex items-center shadow-md space-x-8 bg-white rounded-md px-10 py-6'>
     <Input onCardNumberChange={setCardNumber} onCVVNumberChange={setCVVNumber} onNameChange={setName} 
     onExpiryDateChange={setExpiryDate} />
     <Card cardNumber={cardNumber} cVVNumber={cVVNumber} name={name} expiryDate={expiryDate} />

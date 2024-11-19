@@ -21,7 +21,7 @@ function Card({cardNumber, cVVNumber, name, expiryDate}) {
                         <p>VALID TILL</p>
                     </div>
                     <div class="row name">
-                    <p>{name || "CARD HOLDER"}</p>
+                    <p>{name || "HOLDER'S FULL NAME"}</p>
                     <p>{expiryDate || "MM/YY"}</p>
                     </div>
                 </div>

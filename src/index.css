@@ -8,5 +8,7 @@ body {
   display: flex;
   justify-content: center;
   background-color: aliceblue;
+  align-items: center;
+  height: 100vh;
 }
 
