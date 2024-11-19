@@ -8,7 +8,7 @@ let notifications = [
   {
     name: "Payment received",
     description: "Magic UI",
-    time: "15m ago",
+    time: "15m ago ",
 
     icon: "💸",
     color: "#00C9A7",
