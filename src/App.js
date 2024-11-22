@@ -1,11 +1,11 @@
 import './App.css';
-import { AnimatedListDemo } from './pages/AnimatedListDemo';
+import { IconGlobeDemo } from './pages/Demo';
 
 function App() {
   return (
-    <>
-    <AnimatedListDemo/>
-    </>
+    <div className='flex justify-center w-full mt-20'>
+    <IconGlobeDemo/>
+    </div>
   );
 }
 
